@@ -27,7 +27,7 @@ Array<T> Array<T>::operator=(const Array & instance){
 
 template<typename T>
 T& Array<T>::operator[](unsigned int pos) const{
-	if (pos > this->_size) throw std::exception();
+	if (pos >= this->_size) throw std::exception();
 	return this->_arr[pos] ;
 }
 
